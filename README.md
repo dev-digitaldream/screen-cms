@@ -2,6 +2,8 @@
 
 A modern, drag-and-drop editor for composing dynamic layouts for TV displays. Built with React, Vite, Zustand, and Express.
 
+![Screen Editor — canvas layout editor](docs/screenshot.jpeg)
+
 ## Features
 
 ✨ **13 Widget Types**
