@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#0a0a0e</color>
+    <color name="surface">#111827</color>
+    <color name="indigo">#6366f1</color>
+    <color name="indigo_dark">#4f51c8</color>
+    <color name="text_primary">#e2e8f0</color>
+    <color name="text_muted">#94a3b8</color>
+    <color name="green">#10b981</color>
+    <color name="red">#ef4444</color>
+    <color name="amber">#f59e0b</color>
+</resources>

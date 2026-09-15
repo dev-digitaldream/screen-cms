@@ -1,0 +1,25 @@
+FROM node:20-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends dumb-init && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY server/package*.json ./server/
+WORKDIR /app/server
+RUN npm ci --omit=dev
+
+WORKDIR /app
+
+COPY client/dist ./client/dist
+COPY server ./server
+COPY .env* ./
+
+RUN mkdir -p /app/data
+
+EXPOSE 3001
+
+ENV NODE_ENV=production
+ENV DATA_DIR=/app/data
+ENV TRUST_PROXY=1
+
+CMD ["dumb-init", "node", "server/server.js"]

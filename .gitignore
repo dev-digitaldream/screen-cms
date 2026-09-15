@@ -1,0 +1,33 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+data/
+*.sqlite
+*.sqlite-journal
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Android build artifacts
+android/.gradle/
+android/app/build/
+android/build/
+android/app/release/*.apk
+android/app/release/*.idsig
+.buildid
+
+# Android secrets
+android/local.properties
+android/*.jks
+android/*.keystore
+
+# Local tooling & deploy config
+.claude/
+.windsurf/
+.caprover-deploy.json

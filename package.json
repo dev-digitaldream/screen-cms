@@ -1,0 +1,11 @@
+{
+  "name": "screen-editor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm start\"",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  }
+}
