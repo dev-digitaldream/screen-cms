@@ -84,9 +84,9 @@
 - [ ] Open http://localhost:3001
 - [ ] App works in container
 
-### CapRover Deployment
-- [ ] Build tarball
-- [ ] Upload to CapRover
+### VPS Deployment
+- [ ] Build Docker image
+- [ ] Deploy container on VPS
 - [ ] Configure env vars (NODE_ENV=production, DATA_DIR=/app/data)
 - [ ] Create persistent volume for /app/data
 - [ ] Test save/load layouts

@@ -80,13 +80,15 @@ docker build -t screen-editor:latest .
 docker run -p 3001:3001 -e NODE_ENV=production screen-editor:latest
 ```
 
-### CapRover / Production
+### Self-hosted (VPS)
 
 ```bash
 npm run build
 export DATA_DIR=/app/data NODE_ENV=production
 node server/server.js
 ```
+
+Works behind any reverse proxy (Caddy, Nginx, Cloudflare Tunnel). Persist `/app/data` for the SQLite database and uploads.
 
 ## API Endpoints
 

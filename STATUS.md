@@ -36,13 +36,12 @@ docker build -t screen-editor:latest .
 docker run -p 3001:3001 -e NODE_ENV=production screen-editor:latest
 ```
 
-### CapRover
-1. Build tarball: `tar --exclude='node_modules' -czf screen-editor.tar.gz .`
-2. Upload to CapRover
+### VPS / Self-hosted
+1. Copy the project to your server (git clone or tarball)
+2. `docker build -t screen-editor . && docker run -d -p 3001:3001 -v screen-data:/app/data screen-editor`
 3. Set env: `NODE_ENV=production`, `DATA_DIR=/app/data`
-4. Create persistent volume: `/app/data`
-5. Deploy: `docker build && docker push`
-6. Access: `https://your-domain.com`
+4. Expose via reverse proxy or Cloudflare Tunnel
+5. Access: `https://your-domain.com`
 
 ---
 
@@ -171,11 +170,11 @@ screen-editor/
 **Screen Editor v1.0** is ready for:
 - ✅ Local development
 - ✅ Docker deployment
-- ✅ CapRover production
+- ✅ VPS / self-hosted production
 - ✅ Integration with TV renderer (Phase III)
 
 **Next step**: User can either:
-1. Deploy to CapRover now (works as-is)
+1. Deploy to a VPS now (works as-is)
 2. Add Phase II features (auth, uploads)
 3. Build TV renderer to consume the JSON layouts
 
